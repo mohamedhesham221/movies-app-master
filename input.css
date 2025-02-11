@@ -1,0 +1,79 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-black: #020307;
+}
+
+/* custom scroll bar */
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: var(--color-black);
+}
+
+html::-webkit-scrollbar-thumb {
+  background-color: #ff2c1f;
+  border-radius: 5rem;
+}
+/*custom classes*/
+header.shadow {
+  background-color: #fff;
+  box-shadow: 0 0 4px rgb(14 55 54 / 15%);
+}
+
+header.shadow .logo,
+header.shadow .navbar a {
+  color: var(--color-black);
+}
+
+.nav-item {
+  @apply relative
+}
+
+.nav-link {
+  @apply text-base font-medium text-text-color hover:text-main-color after:block after:content-[''] after:w-0 after:h-[3px] after:bg-transparent transition-all  lg:text-main-color lg:after:absolute lg:after:bg-main-color lg:after:left-0 lg:after:bottom-[-4px] after:transition-all lg:hover:after:w-full
+}
+
+.home-active::after {
+  width: 100%;
+}
+
+.section {
+  @apply py-[50px] px-[4%] lg:py-[4.5rem] lg:px-6
+}
+
+.seaction-heading {
+  @apply text-xl font-medium uppercase border-b border-main-color max-w-[1000px] mx-auto
+}
+
+.section-container {
+  @apply max-w-[1000px] mx-auto grid gap-4 mt-8 grid-cols-auto-fit
+}
+
+.box-img {
+  @apply w-full h-[270px]
+}
+
+.box-img-image {
+  @apply w-full h-full object-cover cursor-pointer transition-all hover:translate-y-[-10px]
+}
+
+.box-heading {
+  @apply text-[0.9rem] font-medium text-main-color
+}
+
+.box-time-genre {
+  @apply text-sm
+}
+.social-icon {
+  @apply w-14 h-14 rounded-full text-[2rem] text-center leading-[55px] bg-bg-color text-main-color border-4 border-[#02030766] transition-all hover:text-bg-color hover:bg-main-color
+}
+
+.navbar.active {
+  top: 100%;
+}
+header.shadow #menu-icon span {
+  color: var(--color-black);
+}
